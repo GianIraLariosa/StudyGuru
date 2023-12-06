@@ -46,8 +46,10 @@ public class LoginControl {
                                 String b1 = password.getText().toString().trim();
                                 String a = doc.getString("Email");
                                 String b = doc.getString("Password");
+                                String c = doc.getString("Name");
                                 user.setEmail(a);
                                 user.setPassword(b);
+                                user.setUsername(c);
                                 if(a1.equalsIgnoreCase("") || b1.equalsIgnoreCase("")){
 
                                     return ;

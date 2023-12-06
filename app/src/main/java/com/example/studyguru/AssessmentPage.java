@@ -190,7 +190,8 @@ public class AssessmentPage extends AppCompatActivity {
         TextView score = myDialog.findViewById(R.id.textView3);
         String text = "You have scored "+ scoreUser + " and have passed the assessment. Congratulations Soldier!";
         score.setText(text);
-        prev.setVisibility(View.GONE);
+        prev.setVisibility(View.VISIBLE);
+
         close.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -200,17 +201,17 @@ public class AssessmentPage extends AppCompatActivity {
         home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent home_popup = new Intent(getApplicationContext(), Level_Menu.class);
+                Intent home_popup = new Intent(getApplicationContext(), HomePage.class);
                 startActivity(home_popup);
             }
         });
-//        next.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent next_popup = new Intent(getApplicationContext(), AdventureLevel2.class);
-//                startActivity(next_popup);
-//            }
-//        });
+        next.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent next_popup = new Intent(getApplicationContext(), Transition_Training.class);
+                startActivity(next_popup);
+            }
+        });
 
         myDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         myDialog.show();

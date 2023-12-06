@@ -44,7 +44,6 @@ public class HomePage extends AppCompatActivity {
         setContentView(R.layout.home_page);
 
         btnTutorial = findViewById(R.id.btnTutorial);
-        btnTraining = findViewById(R.id.btnTraining);
         toolbar = findViewById(R.id.toolbar);
         btnPlaynow = findViewById(R.id.btnPlayNow);
 
@@ -62,7 +61,7 @@ public class HomePage extends AppCompatActivity {
             TextView userEmailTextView = headerview.findViewById(R.id.Email_curr_user);
 
             userEmailTextView.setText(currUser.getEmail());
-            userNameTextView.setText("Wazzup");
+            userNameTextView.setText(currUser.getUsername());
         } else {
 
 

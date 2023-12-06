@@ -18,6 +18,9 @@ public class Assessment_Adapter extends RecyclerView.Adapter<Assessment_Adapter.
     private static final int Max_item = 10;
     private List<Assessment> localDataset;
     private static final int TEXT_CHANGE_LISTENER_KEY = R.id.text_change_listener_key;;
+
+    private int textColor = Color.BLACK;
+
     public Assessment_Adapter(List<Assessment> dataSet){
         localDataset = dataSet;
     }
@@ -110,5 +113,10 @@ public class Assessment_Adapter extends RecyclerView.Adapter<Assessment_Adapter.
         }
 
         super.onViewRecycled(holder);
+    }
+
+    public void updateTextColor(int newColor) {
+        this.textColor = newColor;
+        notifyDataSetChanged(); // Notify the adapter that the data set has changed
     }
 }
